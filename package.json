@@ -6,10 +6,10 @@
   "license": "Unlicense",
   "repository": {
     "type": "git",
-    "url": "my-git.git"
+    "url": "https://github.com/philiWeitz/react-native-android-location-switch.git"
   },
   "bugs": {
-    "url": "my-git/issues"
+    "url": "https://github.com/philiWeitz/react-native-android-location-switch/issues"
   },
   "homepage": "git-readme",
   "keywords": [
@@ -23,6 +23,6 @@
     "test": "jest"
   },
   "peerDependencies": {
-    "react-native": ">=0.38.0"
+    "react-native": ">= 0.38.0"
   }
 }
