@@ -1,0 +1,28 @@
+{
+  "name": "react-native-android-location-switch",
+  "version": "0.0.1",
+  "author": "Philipp Weitz",
+  "private": false,
+  "license": "Unlicense",
+  "repository": {
+    "type": "git",
+    "url": "my-git.git"
+  },
+  "bugs": {
+    "url": "my-git/issues"
+  },
+  "homepage": "git-readme",
+  "keywords": [
+    "react-native",
+    "android",
+    "library",
+    "location"
+  ],
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest"
+  },
+  "peerDependencies": {
+    "react-native": ">=0.38.0"
+  }
+}
