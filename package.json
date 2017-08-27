@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "author": "Philipp Weitz",
   "private": false,
-  "license": "Unlicense",
+  "license": "Apache-2.0",
+  "nativePackage": true,
   "repository": {
     "type": "git",
     "url": "https://github.com/philiWeitz/react-native-android-location-switch.git"
@@ -11,17 +12,12 @@
   "bugs": {
     "url": "https://github.com/philiWeitz/react-native-android-location-switch/issues"
   },
-  "homepage": "git-readme",
   "keywords": [
     "react-native",
     "android",
     "library",
     "location"
   ],
-  "scripts": {
-    "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest"
-  },
   "peerDependencies": {
     "react-native": ">= 0.38.0"
   }
