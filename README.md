@@ -5,7 +5,9 @@ A react Native module to enable location based services on Android.
 
 
 ## Requirements
-react-native >= 0.38.0
+- react-native >= 0.38.0
+- android buildToolsVersion 26.0.1
+- gradle build tools 2.3.3
 
 
 ## Installation
