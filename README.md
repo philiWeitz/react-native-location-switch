@@ -3,6 +3,8 @@
 
 A react Native module to enable location based services on Android.
 
+![](preview/preview.gif)
+
 
 ## Requirements
 - react-native >= 0.38.0
