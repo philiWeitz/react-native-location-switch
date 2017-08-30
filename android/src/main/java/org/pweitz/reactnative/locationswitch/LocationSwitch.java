@@ -1,5 +1,4 @@
-package org.pweitz.android.locationswitch;
-
+package org.pweitz.reactnative.locationswitch;
 
 import android.app.Activity;
 import android.content.IntentSender;
