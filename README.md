@@ -1,10 +1,9 @@
 
-# React Native Android Location Switch
+# React Native Location Switch
 
-A react Native module to enable location based services on Android.
+A react Native module to enable location based services on Android and IOS.
 
-![](preview/preview.gif)
-
+<img src="preview/previewAndroid.gif" width="200" />
 
 ## Requirements
 - react-native >= 0.38.0
@@ -12,24 +11,24 @@ A react Native module to enable location based services on Android.
 - gradle build tools 2.3.3
 
 
-## Installation
+## Installation Android
 
-1. npm install react-native-android-location-switch
+1. npm install react-native-location-switch
 
 2. add the following 2 lines to your <project>/android/settings.gradle file
    ```
-   include ':react-native-android-location-switch'
-   project(':react-native-android-location-switch').projectDir = new File(settingsDir, '../node_modules/react-native-android-location-switch/android')
+   include ':react-native-location-switch'
+   project(':react-native-location-switch').projectDir = new File(settingsDir, '../node_modules/react-native-location-switch/android')
    ```
 
 3. add the following line to your <project>/android/app/build.gradle file
    ```
-   compile project(':react-native-android-location-switch')
+   compile project(':react-native-location-switch')
    ```
 
 4. add the "LocationSwitchPackage" import into your MainApplication.java file:
    ```java
-   import org.pweitz.android.locationswitch.LocationSwitchPackage;
+   import org.pweitz.reactnative.locationswitch.LocationSwitchPackage;
    ```
    
 5. add the "LocationSwitchPackage" into your MainApplication.java file (getPackages method):
@@ -52,6 +51,15 @@ A react Native module to enable location based services on Android.
         LocationSwitch.getInstance().onActivityResult(requestCode, resultCode);
     }
     ```
+
+## Installation IOS
+
+1. Open the project in xCode, left click on the Libraries folder -> Add files to ... and select 
+   ```
+   ./node_modules/react-native-location-switch/ios/RNReactNativeLocationSwitch.xcodeproj
+   ```
+
+2. Open the project -> Build Phases -> Link Binary With Libraries and select libReactNativeLocationSwitch.a
 
 
 ## React Native Interface
@@ -78,7 +86,7 @@ errorCallback | null | Is called when the user denies access to the location ser
 ```javascript
 import React, { Component } from 'react';
 import { AppRegistry, Text, View, TouchableOpacity, StyleSheet } from 'react-native';
-import LocationSwitch from 'react-native-android-location-switch';
+import LocationSwitch from 'react-native-location-switch';
 
 const style = StyleSheet.create({
   container: {

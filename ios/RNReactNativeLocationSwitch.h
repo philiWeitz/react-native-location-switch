@@ -5,7 +5,7 @@
 #import <React/RCTBridgeModule.h>
 #endif
 
-@interface ReactNativeAndroidLocationSwitch : NSObject <RCTBridgeModule>
+@interface RNReactNativeLocationSwitch : NSObject <RCTBridgeModule>
 
 @end
   

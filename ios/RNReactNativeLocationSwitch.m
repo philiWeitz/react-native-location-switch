@@ -1,9 +1,9 @@
 
-#import "ReactNativeAndroidLocationSwitch.h"
+#import "RNReactNativeLocationSwitch.h"
 #import "UIKit/UIKit.h"
 #import <CoreLocation/CoreLocation.h>
 
-@implementation ReactNativeAndroidLocationSwitch
+@implementation RNReactNativeLocationSwitch
 
 - (dispatch_queue_t)methodQueue
 {

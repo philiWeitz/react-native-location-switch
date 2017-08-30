@@ -1,6 +1,6 @@
 'use strict';
 
-import { NativeModules, Platform } from 'react-native'
+import { NativeModules, Platform } from 'reactnative-native'
 
 const locationSwitchModule = NativeModules.ReactNativeAndroidLocationSwitch;
 

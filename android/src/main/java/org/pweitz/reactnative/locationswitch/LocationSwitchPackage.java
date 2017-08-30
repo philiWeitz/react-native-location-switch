@@ -1,4 +1,4 @@
-package org.pweitz.android.locationswitch;
+package org.pweitz.reactnative.locationswitch;
 
 import com.facebook.react.ReactPackage;
 import com.facebook.react.bridge.JavaScriptModule;
