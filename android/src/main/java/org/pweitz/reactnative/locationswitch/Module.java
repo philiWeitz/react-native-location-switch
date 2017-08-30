@@ -19,7 +19,7 @@ public class Module extends ReactContextBaseJavaModule implements ActivityEventL
 
     @Override
     public String getName() {
-        return "ReactNativeAndroidLocationSwitch";
+        return "RNReactNativeLocationSwitch";
     }
 
     @ReactMethod
