@@ -3,7 +3,7 @@
 
 A react Native module to enable location based services on Android and IOS.
 
-<img src="preview/previewAndroid.gif" width="200" />
+<img src="preview/previewAndroid.gif" width="200" /> <img src="preview/previewIOS.gif" width="200" />
 
 ## Requirements
 - react-native >= 0.38.0
