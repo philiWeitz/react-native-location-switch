@@ -107,8 +107,9 @@ public class LocationSwitch {
 
         if(gps_enabled || network_enabled) {
             successCallback.invoke();
+        } else {
+            errorCallback.invoke();
         }
-        errorCallback.invoke();
     }
 
 
@@ -125,7 +126,7 @@ public class LocationSwitch {
         }
     }
 
-    
+
     private class LocationResultCallback implements ResultCallback<LocationSettingsResult> {
 
         private Activity mActivity;
