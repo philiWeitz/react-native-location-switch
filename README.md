@@ -72,20 +72,25 @@ LocationSwitch.enableLocationService(
     errorCallback
 );
 ```
+```javascript
+LocationSwitch.isLocationEnabled(
+    successCallback,
+    errorCallback
+);
+```
 
 Option | Default | Info
 ------ | ------- | ----
-interval | 1000 | Update interval in ms
-requestHighAccuracy | false | If true, highest accuracy is requested. If false, "block" level accuracy is requested
+interval | 1000 | Update interval in ms (ignored on IOS)
+requestHighAccuracy | false | If true, highest accuracy is requested. If false, "block" level accuracy is requested (ignored on IOS)
 successCallback | null | Is called when the user allows access to the location services or when the location services are already enabled
 errorCallback | null | Is called when the user denies access to the location services
-
 
 ## Usage
 
 ```javascript
 import React, { Component } from 'react';
-import { AppRegistry, Text, View, TouchableOpacity, StyleSheet } from 'react-native';
+import { AppRegistry, Text, View, TouchableOpacity, StyleSheet, Alert } from 'react-native';
 import LocationSwitch from 'react-native-location-switch';
 
 const style = StyleSheet.create({
@@ -102,7 +107,7 @@ const style = StyleSheet.create({
   },
   textSuccess: {
     fontSize: 20,
-    color: 'green'
+    color: 'green',
   },
 });
 
@@ -113,6 +118,16 @@ export default class LocationSwitchApp extends Component {
 
     this.state = { locationEnabled: false };
     this.onEnableLocationPress = this.onEnableLocationPress.bind(this);
+  }
+
+  componentDidMount() {
+    LocationSwitch.isLocationEnabled(
+      () => {
+        Alert.alert('Location is enabled');
+        this.setState({ locationEnabled: true });
+      },
+      () => { Alert.alert('Location is disabled'); },
+    );
   }
 
   onEnableLocationPress() {
@@ -142,5 +157,4 @@ export default class LocationSwitchApp extends Component {
 }
 
 AppRegistry.registerComponent('reactClientSandbox', () => LocationSwitchApp);
-
 ```

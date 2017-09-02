@@ -47,13 +47,21 @@ function onIOSErrorCallback() {
 
 const LocationSwitch = {
 
+  isLocationEnabled(successCallback, errorCallback) {
+    if (Platform.OS === 'ios') {
+      locationSwitchModule.isLocationEnabled(successCallback, errorCallback);
+    } else {
+      locationSwitchModule.isLocationEnabled(successCallback, errorCallback);
+    }
+  },
+
   enableLocationService(interval, requestHighAccuracy, successCallback, errorCallback) {
     if (Platform.OS === 'ios') {
       sSuccessCallback = successCallback;
       sErrorCallback = errorCallback;
 
       addAppStateListener();
-      locationSwitchModule.enableLocationService(this.onIOSSuccessCallback, this.onIOSErrorCallback);
+      locationSwitchModule.enableLocationService(onIOSSuccessCallback, onIOSErrorCallback);
 
     } else {
       locationSwitchModule.enableLocationService(interval, requestHighAccuracy, successCallback, errorCallback);
