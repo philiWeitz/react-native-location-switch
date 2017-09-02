@@ -1,7 +1,9 @@
 package org.pweitz.reactnative.locationswitch;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.IntentSender;
+import android.location.LocationManager;
 import android.util.Log;
 
 import com.facebook.react.bridge.Callback;
@@ -87,11 +89,35 @@ public class LocationSwitch {
         }
     }
 
+
+    public void isLocationEnabled(final Activity activity, final Callback successCallback,
+                                  final Callback errorCallback) {
+
+        LocationManager lm = (LocationManager) activity.getSystemService(Context.LOCATION_SERVICE);
+        boolean gps_enabled = false;
+        boolean network_enabled = false;
+
+        try {
+            gps_enabled = lm.isProviderEnabled(LocationManager.GPS_PROVIDER);
+        } catch(Exception ex) {}
+
+        try {
+            network_enabled = lm.isProviderEnabled(LocationManager.NETWORK_PROVIDER);
+        } catch(Exception ex) {}
+
+        if(gps_enabled || network_enabled) {
+            successCallback.invoke();
+        }
+        errorCallback.invoke();
+    }
+
+
     private void callSuccessCallback() {
         if (null != mSuccessCallback) {
             mSuccessCallback.invoke();
         }
     }
+
 
     private void callErrorCallback() {
         if (null != mErrorCallback) {
@@ -99,6 +125,7 @@ public class LocationSwitch {
         }
     }
 
+    
     private class LocationResultCallback implements ResultCallback<LocationSettingsResult> {
 
         private Activity mActivity;
