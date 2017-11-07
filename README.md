@@ -30,7 +30,7 @@ A react Native module to enable location based services on Android and IOS.
    ```java
    import org.pweitz.reactnative.locationswitch.LocationSwitchPackage;
    ```
-   
+
 5. add the "LocationSwitchPackage" into your MainApplication.java file (getPackages method):
    ```java
     @Override
@@ -41,9 +41,14 @@ A react Native module to enable location based services on Android and IOS.
           new LocationSwitchPackage()
       );
     }
-    ```
-   
-6. add the following code into your MainActivity.java file:
+
+   ```
+6. add the "LocationSwitch" import into your MainActivity.java file:
+   ```java
+   import org.pweitz.reactnative.locationswitch.LocationSwitch;
+   ```
+
+7. add the following code into your MainActivity.java file:
     ```java   
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
