@@ -59,12 +59,22 @@ A react Native module to enable location based services on Android and IOS.
 
 ## Installation IOS
 
+Using Pods :
+
+1. add the following into your podfile :
+  ```
+  pod 'ReactNativeAndroidLocationSwitch', :path => '../node_modules/react-native-location-switch/ios'
+  ```
+
+Using xcode :
+
 1. Open the project in xCode, left click on the Libraries folder -> Add files to ... and select
    ```
    ./node_modules/react-native-location-switch/ios/RNReactNativeLocationSwitch.xcodeproj
    ```
 
 2. Open the project -> Build Phases -> Link Binary With Libraries and select libRNReactNativeLocationSwitch.a
+
 
 
 ## React Native Interface
