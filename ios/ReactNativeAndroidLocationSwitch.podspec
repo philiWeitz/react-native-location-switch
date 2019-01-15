@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.description  = <<-DESC
                   ReactNativeAndroidLocationSwitch
                    DESC
-  s.homepage     = ""
+  s.homepage     = "https://github.com/philiWeitz/react-native-location-switch"
   s.license      = "Apache-2.0"
   # s.license      = { :type => "Apache-2.0", :file => "../LICENSE" }
   s.author             = { "author" => "author@domain.cn" }
@@ -20,5 +20,3 @@ Pod::Spec.new do |s|
   #s.dependency "others"
 
 end
-
-  
