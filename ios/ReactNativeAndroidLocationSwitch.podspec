@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.license      = "Apache-2.0"
   # s.license      = { :type => "Apache-2.0", :file => "../LICENSE" }
   s.author             = { "author" => "author@domain.cn" }
-  s.platform     = :ios, "7.0"
+  s.platform     = :ios, "8.0"
   s.source       = { :git => "https://github.com/philiWeitz/react-native-android-location-switch.git", :tag => "master" }
   s.source_files  = "*.{h,m}"
   s.requires_arc = true
