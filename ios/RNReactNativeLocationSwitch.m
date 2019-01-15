@@ -20,6 +20,8 @@ RCT_REMAP_METHOD(enableLocationService,
     CLAuthorizationStatus status = [CLLocationManager authorizationStatus];
 
     if (![CLLocationManager locationServicesEnabled]) {
+        // redirect to the app settings page not the previously set "App-Prefs:root=Privacy&path=LOCATION"
+        // thus to avoid app rejection from the app store
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]];
 
     } else if (status == kCLAuthorizationStatusDenied) {
