@@ -1,17 +1,11 @@
 {
-  "name": "react-native-location-switch",
-  "version": "0.1.0",
   "author": "Philipp Weitz",
-  "private": false,
-  "license": "Apache-2.0",
-  "nativePackage": true,
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/philiWeitz/react-native-location-switch.git"
-  },
   "bugs": {
     "url": "https://github.com/philiWeitz/react-native-location-switch/issues"
   },
+  "description": "A React Native module that allows you to verify the status of the device's location services.",
+  "homepage": "https://github.com/philiWeitz/react-native-location-switch",
+  "license": "Apache-2.0",
   "keywords": [
     "react-native",
     "android",
@@ -19,7 +13,15 @@
     "library",
     "location"
   ],
+  "name": "react-native-location-switch",
+  "nativePackage": true,
   "peerDependencies": {
     "react-native": ">= 0.38.0"
-  }
+  },
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/philiWeitz/react-native-location-switch.git"
+  },
+  "version": "0.1.1"
 }
