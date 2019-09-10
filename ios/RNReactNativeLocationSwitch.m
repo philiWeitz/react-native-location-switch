@@ -16,9 +16,16 @@ RCT_REMAP_METHOD(enableLocationService,
                  onPermissionGiven:(RCTResponseSenderBlock)successCallback
                  onPermissionDenied:(RCTResponseSenderBlock)errorCallback) {
     CLAuthorizationStatus status = [CLLocationManager authorizationStatus];
-
+    
     if (![CLLocationManager locationServicesEnabled] || status == kCLAuthorizationStatusDenied) {
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString] options:@{} completionHandler:^(BOOL success) {}];
+        NSURL *serviceURL = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
+        
+        if ([[UIApplication sharedApplication] canOpenURL:serviceURL]) {
+            [[UIApplication sharedApplication] openURL:serviceURL];
+        }
+        else {
+            errorCallback(@[[NSNull null]]);
+        }
     }
     else {
         successCallback(@[[NSNull null]]);
@@ -30,7 +37,7 @@ RCT_REMAP_METHOD(isLocationEnabled,
                  onLocationEnabled:(RCTResponseSenderBlock)successCallback
                  onLocationDisable:(RCTResponseSenderBlock)errorCallback) {
     CLAuthorizationStatus status = [CLLocationManager authorizationStatus];
-
+    
     if (![CLLocationManager locationServicesEnabled] || status == kCLAuthorizationStatusDenied) {
         errorCallback(@[[NSNull null]]);
     } else {
