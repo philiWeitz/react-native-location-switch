@@ -40,6 +40,6 @@ repositories {
 
 
 dependencies {
-    compile 'com.facebook.react:react-native:+'
-    compile 'com.google.android.gms:play-services-location:11.0.0'
+    implementation 'com.facebook.react:react-native:+'
+    implementation 'com.google.android.gms:play-services-location:11.0.0'
 }
